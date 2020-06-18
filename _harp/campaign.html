@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="format-detection" content="telephone=no">
+        <title>Ying-Tsu, Tseng | Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto+Slab&display=swap" rel="stylesheet"> 
+        <link rel = "icon" href="portfolio/icon.png" type="image/x-icon"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
+        <link rel="stylesheet" href="portfolio.css">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-company">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Tseng</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="graphic.html">Graphic Design <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="campaign.html">Campaigns/Editorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portrait.html">Portraits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reume.html">About</a>
+                        </li>
+                    </ul>  
+                </div>
+            </div>
+        </nav>
+
+      
+        <div class="contact" onclick="openModal()" >
+            <p>LINK</p>
+        </div>
+
+        <div class="container" role="main">
+            <h1>Campaigns</h1>
+            <div class="row content">
+                <div class="camp camp1" onclick="openChampModal(1)"></div>
+                <div class="camp camp2" onclick="openChampModal(2)"></div>
+                <div class="camp camp3" onclick="openChampModal(3)"></div>
+                <div class="camp camp4" onclick="openChampModal(4)"></div>
+                <div class="camp camp5" onclick="openChampModal(5)"></div>
+                <div class="camp camp6" onclick="openChampModal(6)"></div>
+                <div class="camp camp7" onclick="openChampModal(7)"></div>
+                <div class="camp camp8" onclick="openChampModal(8)"></div>
+                <div class="camp camp9" onclick="openChampModal(9)"></div>
+                <div class="camp camp10" onclick="openChampModal(10)"></div>
+                <div class="camp camp11" onclick="openChampModal(11)"></div>
+                <div class="camp camp12" onclick="openChampModal(12)"></div>
+                <div class="camp camp13" onclick="openChampModal(13)"></div>
+                <div class="camp camp14" onclick="openChampModal(14)"></div>
+                <div class="camp camp15" onclick="openChampModal(15)"></div>
+                <div class="camp camp16" onclick="openChampModal(16)"></div>
+                <div class="camp camp17" onclick="openChampModal(17)"></div>
+                <div class="camp camp18" onclick="openChampModal(18)"></div>
+                <div class="camp camp19" onclick="openChampModal(19)"></div>
+                <div class="camp camp20" onclick="openChampModal(20)"></div>
+                <div class="camp camp21" onclick="openChampModal(21)"></div>
+                <div class="camp camp22" onclick="openChampModal(22)"></div>
+                <div class="camp camp23" onclick="openChampModal(23)"></div>
+                <div class="camp camp24" onclick="openChampModal(24)"></div>
+                
+            </div>
+        </div>
+        
+         <!-- popup window-->
+        <div id="social-modal">
+            <div class="social-content">
+                <div class="row social-links">
+                    <div class="col-6 youtube" onclick="location.href='https://www.youtube.com/channel/UC2L5pXTjaCnGogIHAssdeUg?sub_confirmation=1';"></div>
+                    <div class="col-6 instagram" onclick="location.href='http://www.instagram.com/sonythegirl';"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="champ-modal">
+            <div class="champ-content">
+                <img id="champ-img" src="">
+            </div>
+        </div>
+
+        <script>
+            
+            // Get the modal
+            var modal = document.getElementById('social-modal');
+            var champModal = document.getElementById('champ-modal');
+            var champImg = document.getElementById('champ-img');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.addEventListener("click", function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            window.addEventListener("click", function(event) {
+                if (event.target == champModal) {
+                    champModal.style.display = "none";
+                }
+            });
+
+            function openModal(){
+                modal.style.display = "block";
+            }
+
+            function openChampModal(index){
+                champImg.src = "portfolio/P2/"+index.toString()+".jpg";
+                champModal.style.display = "block";
+            }
+
+           
+
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

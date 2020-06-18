@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="format-detection" content="telephone=no">
+        <title>Ying-Tsu, Tseng | Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto+Slab&display=swap" rel="stylesheet"> 
+        <link rel = "icon" href="portfolio/icon.png" type="image/x-icon"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
+        <link rel="stylesheet" href="portfolio.css">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-company">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Tseng</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                          <a class="nav-link active" href="graphic.html">Graphic Design <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="campaign.html">Campaigns/Editorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portrait.html">Portraits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reume.html">About</a>
+                        </li>
+                    </ul>  
+                </div>
+            </div>
+        </nav>
+
+      
+        <div class="contact" onclick="openModal()" >
+            <p>LINK</p>
+        </div>
+
+        <div role="main" class="container">
+            <h1>Graphic Design</h1>
+            <div class="row content">
+                <div class="graphic graphic1 " onclick="openPicModal(1)"></div>
+                <div class="graphic graphic2 " onclick="openPicModal(2)"></div>
+                <div class="graphic graphic3 " onclick="openPicModal(3)"></div>
+                <div class="graphic graphic4 " onclick="openPicModal(4)"></div>
+                <div class="graphic graphic5 " onclick="openPicModal(5)"></div>
+                <div class="graphic graphic6 " onclick="openPicModal(6)"></div>
+                <div class="graphic graphic7 " onclick="openPicModal(7)"></div>
+                <div class="graphic graphic8 " onclick="openPicModal(8)"></div>
+                <div class="graphic graphic9 " onclick="openPicModal(9)"></div>
+                <div class="graphic graphic10 " onclick="openPicModal(10)"></div>
+                <div class="graphic graphic11 " onclick="openPicModal(11)"></div>
+            </div>
+        </div>
+
+        <!-- graphic popup -->
+        <div id="graphic-modal">
+            <div class="graphic-content">
+                <img id="graphicImg" src="" alt="" >
+            </div>
+        </div>
+        
+         <!-- popup window-->
+        <div id="social-modal">
+            <div class="social-content">
+                <div class="row social-links">
+                    <div class="col-6 youtube" onclick="location.href='https://www.youtube.com/channel/UC2L5pXTjaCnGogIHAssdeUg?sub_confirmation=1';"></div>
+                    <div class="col-6 instagram" onclick="location.href='http://www.instagram.com/sonythegirl';"></div>
+                </div>
+            </div>
+        </div>    
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('social-modal');
+            var graphicModal = document.getElementById('graphic-modal');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.addEventListener("click", function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            window.addEventListener("click", function(event){
+                if (event.target == graphicModal) {
+                    graphicModal.style.display = "none";
+                }
+            })
+            
+            function openModal(){
+                modal.style.display = "block";
+            }
+
+            function openPicModal(index){
+                document.getElementById('graphicImg').src = "portfolio/P1/"+index.toString()+".jpg";
+                graphicModal.style.display = "block";
+            }
+            
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
